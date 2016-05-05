@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TipCalculator"
+   >
+
+    <TextView
+        android:id="@+id/billAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_amount_label"
+        style="@style/text_view"
+        android:padding="10dp"
+
+        />
+    <EditText
+        android:id="@+id/billAmaountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billAmountLabel"
+        android:layout_toRightOf="@+id/billAmountLabel"
+        android:layout_marginLeft="5dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_amount"
+        android:textSize="20sp"  >
+        <requestFocus />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billAmountLabel"
+        android:layout_alignLeft="@+id/billAmountLabel"
+        android:text="@string/tip_percent_label"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/percentLabel"
+        android:layout_alignLeft="@id/billAmaountEditText"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:text="@string/tip_percent"
+
+        />
+    <Button
+        android:id="@+id/ButtonDecrease"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@id/tipPercent"
+        android:layout_toRightOf="@id/tipPercent"
+        android:layout_marginLeft="30dp"
+        android:text="@string/decrease"
+        android:textSize="20sp"
+
+        />
+    <Button
+        android:id="@+id/ButtonIncrease"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/tipPercent"
+        android:layout_toRightOf="@+id/ButtonDecrease"
+        android:textSize="20sp"
+        android:text="@string/increase"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipLabel"
+    android:text="@string/tip_amount_label"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_below="@+id/percentLabel"
+    android:padding="10dp"
+    />
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipLabel"
+        android:text="@string/tip_amount"
+        android:textSize="20sp"
+        android:layout_alignLeft="@id/billAmaountEditText"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalLabel"
+        android:layout_below="@+id/tipLabel"
+        android:text="@string/total_amount_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalAmount"
+        android:layout_alignBaseline="@+id/totalLabel"
+        android:text="@string/total_amount"
+        android:layout_alignLeft="@id/billAmaountEditText"
+        android:textSize="20sp"
+        />
+
+
+</RelativeLayout>
